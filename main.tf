@@ -20,6 +20,15 @@ resource "digitalocean_kubernetes_cluster" "k8s_iniciativa" {
   node_pool {
     name       = "default"
     size       = "s-2vcpu-2gb"
-    node_count = 3
+    node_count = 2
   }
+}
+
+resource "digitalocean_kubernetes_node_pool" "node_adicional" {
+  cluster_id = digitalocean_kubernetes_cluster.k8s_iniciativa.id
+
+  name       = "backend-pool"
+  size       = "s-2vcpu-2gb"
+  node_count = 1
+  
 }

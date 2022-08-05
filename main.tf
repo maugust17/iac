@@ -45,3 +45,8 @@ variable "k8s_name" {
 variable "region" {
   
 }
+
+resource "local_sensitive_file" "foo" {
+    content  = digitalocean_kubernetes_cluster.k8s_iniciativa.kube_config.0.raw_config
+    filename = "kube_config.yaml"
+}

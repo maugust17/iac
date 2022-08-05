@@ -8,7 +8,7 @@ terraform {
 }
 # Configure the DigitalOcean Provider
 provider "digitalocean" {
-  token = "dop_v1_3aad1c0c14c81a0ae2d92b1629b92e67a443a9e42579a4675ba75f4ee90755cc"
+  token = "dop_v1_06c98b15ff9a764bf43fbe2a320cd7b74290303d36e10ad965bfaa545326a4e7"
 }
 
 resource "digitalocean_kubernetes_cluster" "k8s_iniciativa" {
